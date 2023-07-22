@@ -7,7 +7,13 @@ The scope of this project was to build a machine learning model to predict loan 
 
 The financial information in the dataset consisted of various features related to lending. The target variable to predict was the 'loan_status', which had two classes: 0 (healthy loan) and 1 (high-risk loan).
 
-Before beginning the machine learning process, the distribution of the loan_status variable was examined using value_counts. This allowed an understanding of the the class imbalance issue in the dataset, where healthy loans significantly outnumbered high-risk loans. To address the imbalance in the class, the RandomOverSampler module was utilized from the imbalanced-learn library. This created a balanced dataset by oversampling the high risk loans.
+Before beginning the machine learning process, the distribution of the loan_status variable was examined using value_counts. This allowed an understanding of the the class imbalance issue in the dataset, where healthy loans significantly outnumbered high-risk loans. 
+
+![Class Imbalance](Images/class_imbalance.png)
+
+
+
+To address the imbalance in the class, the RandomOverSampler module was utilized from the imbalanced-learn library. This created a balanced dataset by oversampling the high risk loans.
 
 The stages of the machine learning process included:
 
@@ -23,10 +29,12 @@ After training the logistic regression model, predictions were made on the testi
 ## Results
 
 ### Machine Learning Model 1:
+![classification](Images/classifcation_report_model_1.png)
 
 • Balanced Accuracy Score: 0.9521
+![score](Images/bal_accuracy_score_model_1.png)
 
-• The balanced accuracy score for Model 1 is 0.9521352751368186, which indicates that the model achieved an average accuracy of 95.21% in predicting both healthy loans (class 0) and high-risk loans (class 1). This score considers the class imbalance and provides a fair assessment of the model's performance on both classes.
+• The balanced accuracy score for Model 1 is 0.9521, which indicates that the model achieved an average accuracy of 95.21% in predicting both healthy loans (class 0) and high-risk loans (class 1). This score considers the class imbalance and provides a fair assessment of the model's performance on both classes.
 
 • Precision for Class 0 (Healthy Loan): 1.00
 Model 1 achieved a precision of 1.00 (100%) for class 0, meaning that when it predicts a loan as a healthy loan, it is correct 100% of the time.
@@ -42,8 +50,10 @@ The recall for class 1 is 0.91 (91%), indicating that Model 1 correctly identifi
 
 
 ### Machine Learning Model 2:
+![classification](Images/classification_report_model_2.png)
 
 •Balanced Accuracy Score: 0.9942
+![score](Images/bal_accuracy_score_model_2.png)
 
 •The balanced accuracy score for Model 2 is 0.9942, which indicates that the model achieved an average accuracy of 99.42% in predicting both healthy loans (class 0) and high-risk loans (class 1). This score provides a fair assessment of the model's performance on both classes.
 
